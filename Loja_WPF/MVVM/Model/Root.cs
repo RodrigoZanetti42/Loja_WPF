@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Loja_WPF.MVVM.Model
 {
@@ -22,6 +26,32 @@ namespace Loja_WPF.MVVM.Model
         public List<Iten> itens { get; set; }
         public List<Pagamento> pagamento { get; set; }
 
-       
+        public async Task<List<Root>> ObterDados()
+        {
+            var client = new RestClient();
+            var request = new RestRequest("https://desafiotecnicosti3.azurewebsites.net/pedido", Method.Get);
+
+            RestResponse response = await client.ExecuteAsync(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                return JsonConvert.DeserializeObject<List<Root>>(response.Content);
+            else
+                return null;
+
+
+
+
+        }
+        // metodo da classe root para somar pedido
+        //public static float Somafloat() 
+        //{
+        
+        //    var client = new RestClient();  
+        //    float totalpedido = 
+                
+
+        //}
+
     }
+   
 }

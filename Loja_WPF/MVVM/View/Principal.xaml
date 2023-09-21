@@ -37,7 +37,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0" Background="DarkSeaGreen">
             <Button Content="Pedido" Name="BuscaPedido" Height="50" Click="BuscaPedido_Click" Margin="5,5,5,10" Background="MediumSeaGreen"/>
-            <Button Content="Relatorio" Name="ListaRElatório" Height="50" Click="BuscaPedido_Click" Margin="5,5,5,10" Background="MediumSeaGreen"/>
+            <Button Content="Relatorio" Name="ListaRElatório" Height="50" Click="Relatorio_Click" Margin="5,5,5,10" Background="MediumSeaGreen"/>
             <Button Content="Sair" Name="Sair" Height="50" Click="Sair_Click" Margin="5,5,5,10" Background="MediumSeaGreen"/>
 
         </StackPanel>
@@ -51,9 +51,13 @@
         <StackPanel Grid.Row="3" Grid.Column="1" Background="DarkSeaGreen"/>
 
         <StackPanel/>
-        <Grid Grid.Column="1" Grid.Row="1" Margin="15,72,18,66">
+        <Grid Grid.Column="1" Grid.Row="1" Margin="15,62,18,56">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="477*"/>
+            </Grid.ColumnDefinitions>
 
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" ShowGridLines="True" Width="1064" Height="103" Margin="0,6,0,0">
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Left" ShowGridLines="True" Width="1064" Height="103" Margin="0,30,0,0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="185*" />
                     <ColumnDefinition Width="106*" />
@@ -69,18 +73,18 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <TextBlock FontSize="20" FontWeight="Bold" Grid.ColumnSpan="1" Grid.Row="0" Margin="0,0,0,26" Grid.RowSpan="2">2023 - Pedidos</TextBlock>
-
 
                 <TextBlock FontSize="12" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Margin="0,0,0,25" Grid.RowSpan="2">Nº do Pedido</TextBlock>
                 <TextBlock FontSize="12" FontWeight="Bold" Grid.Row="1" Grid.ColumnSpan="2" Margin="185,0,0,25" Grid.RowSpan="2">Data Pedido</TextBlock>
                 <TextBlock FontSize="12" FontWeight="Bold" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="5,0,177,25" Grid.RowSpan="2">Nome do Cliente</TextBlock>
                 <TextBlock FontSize="12" FontWeight="Bold" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="4,0,177,25" Grid.RowSpan="2">Status do Pedido</TextBlock>
                 <TextBlock FontSize="12" FontWeight="Bold" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,0,177,25" Grid.RowSpan="2">Valor total</TextBlock>
+
                 <TextBlock Grid.Row="2" Grid.Column="0">50000</TextBlock>
                 <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="185,0,0,0">100000</TextBlock>
                 <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="3,0,177,0">150000</TextBlock>
                 <TextBlock FontSize="16" FontWeight="Bold" Grid.ColumnSpan="6" Grid.Row="3" Margin="0,1,0,0">Total dia: 300000</TextBlock>
+
             </Grid>
 
         </Grid>
