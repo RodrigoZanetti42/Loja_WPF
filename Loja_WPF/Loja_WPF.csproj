@@ -341,6 +341,10 @@
     <Compile Include="MVVM\Model\Pagamento.cs" />
     <Compile Include="MVVM\Model\Root.cs" />
     <Compile Include="MVVM\ViewModel\ClienteViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\EnderecoEntregaViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ItenViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\PagamentoViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\RootViewModel.cs" />
     <Compile Include="MVVM\View\Principal.xaml.cs">
       <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>

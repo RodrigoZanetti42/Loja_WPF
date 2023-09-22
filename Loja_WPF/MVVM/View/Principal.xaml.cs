@@ -40,42 +40,34 @@ namespace Loja_WPF.MVVM.View
 
         }
 
-       
-
-        private void Sair_Click(object sender, RoutedEventArgs e)
+        private async void BuscaPedido_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-        }
-
-        private async void BuscaPedido_Click(object sender,  Root item)
-        {
+            MessageBox.Show("Listamos todos os pedidos conforme solicitado.");
             var Root = new Root();
             var listarCliente = await Root.ObterDados();
-            foreach(var pedido  in listarCliente) 
+            foreach (var pedido in listarCliente)
             {
-                
+
                 int numero = pedido.numero;
                 //string data = pedido.) ;
                 string nome = pedido.cliente.nome;
                 string status = pedido.status;
 
-                
+
             }
 
-          }
+        }
 
         private void Relatorio_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void BuscaPedido_Click(object sender, RoutedEventArgs e)
+        private void Sair_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Listamos todos os pedidos conforme solicitado.");
-
-            
+            Application.Current.Shutdown();
         }
-    }
+      }
     }
 
 

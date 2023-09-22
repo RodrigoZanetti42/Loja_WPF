@@ -42,16 +42,9 @@ namespace Loja_WPF.MVVM.Model
 
 
         }
-        // metodo da classe root para somar pedido
-        //public static float Somafloat() 
-        //{
-        
-        //    var client = new RestClient();  
-        //    float totalpedido = 
-                
-
-        //}
+ 
 
     }
    
 }
+
