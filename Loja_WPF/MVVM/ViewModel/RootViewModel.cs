@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja_WPF.MVVM.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,5 +11,19 @@ namespace Loja_WPF.MVVM.ViewModel
     public class RootViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public Root Root { get; set; }
+
+
+        public RootViewModel()
+
+        {
+
+        }
+
+        public void NotfyPpropertyChange(string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

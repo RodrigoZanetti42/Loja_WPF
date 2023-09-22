@@ -42,17 +42,26 @@ namespace Loja_WPF.MVVM.View
 
         private async void BuscaPedido_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Listamos todos os pedidos conforme solicitado.");
-            var Root = new Root();
-            var listarCliente = await Root.ObterDados();
-            foreach (var pedido in listarCliente)
+            MessageBox.Show("Estamos preparando tudo..");
+
+                 var Root = new Root();
+                    var listarPedido = await Root.ObterDados();
+           
+            //Essa foreach deve levar os dados para o formulario em WPF
+            foreach (var pedido in listarPedido)
             {
 
-                int numero = pedido.numero;
-                //string data = pedido.) ;
-                string nome = pedido.cliente.nome;
-                string status = pedido.status;
+                int numero = pedido.numero;             // numero do pedido
+                DateTime data = pedido.dataCriacao;     //data da criação do pedido
+                string nome = pedido.cliente.nome;      //nome do cliente
+                string status = pedido.status;          //status do pedido
 
+            // passar esses dados para o formulario antes de fazer o download para o banco
+            // criar rotina de code-first para movimentar demais rotinas
+
+
+                
+          
 
             }
 

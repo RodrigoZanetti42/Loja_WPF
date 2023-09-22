@@ -16,17 +16,12 @@ namespace Loja_WPF.MVVM.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Cliente Cliente { get; set; }
-        public ICommand LeituraPedidoAPI { get; set; }
-
+             
         
-        public void ObterPedido() 
-        {
-      
-        }
         public ClienteViewModel() 
             
         {
-           
+            
         }
 
         public void NotfyPpropertyChange(string propertyName = null) 
